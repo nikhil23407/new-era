@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    environment {
+        PATH = "$PATH:/opt/apache-maven-3.9.9/bin"
+    }
+    stages {
+        stage('Get Code') {
+            steps {
+                git 'https://github.com/nikhil23407/new-era.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('sonar-server-25.1.0.102122') {
+                    sh 'mvn sonar:sonar'
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>in.ashokit</groupId>
+  <artifactId>01-maven-web-app</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-RELEASE</version>
+  <name>01-maven-web-app Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  <sonar.host.url>http://13.60.71.133:9000/</sonar.host.url>
+<sonar.login>squ_9644727af0836c4f81bf9358cef8f7957f1840df</sonar.login>
+  </properties>
+  
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <version>5.2.25.RELEASE</version>
+    <scope>test</scope>
+</dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>01-maven-web-app</finalName>
+  </build>
+</project>
