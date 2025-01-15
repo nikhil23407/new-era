@@ -24,7 +24,7 @@
         stage('Code deploy') {
             steps {
                 sshagent(['tomcat-server']) {
-                    sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war admin@51.20.130.60:/home/admin/apache-tomcat-9.0.98/webapps'
+                    sh 'scp -o StrictHostKeyChecking=no target/02-maven-web-app.war admin@51.20.130.60:/home/admin/apache-tomcat-9.0.98/webapps'
                 }
             }
         }
